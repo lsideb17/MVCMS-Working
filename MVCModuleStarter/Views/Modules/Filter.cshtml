@@ -1,0 +1,15 @@
+﻿
+
+
+
+    @model MVCModuleStarter.ViewModels.ModulesViewModel
+        @{
+        ViewBag.Title = "Filter";
+    }
+
+    @Html.Partial("_modules_set", Model.modules)
+
+    @section SideBar {
+        @Html.Partial("_categories_list", Model.categories)
+    }
+

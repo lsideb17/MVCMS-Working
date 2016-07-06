@@ -1,0 +1,35 @@
+﻿@model MVCModuleStarter.ViewModels.AdminViewModel
+
+@{
+    ViewBag.Title = "Admin";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Admin</h2>
+
+<div id='leftItemTemplate'>
+    
+    @Html.Partial("_admin_module", Model.module)
+</div>
+
+<div id='rightItemTemplate'>
+    <h3>Find Module to Update</h3>
+     @Html.Partial("_select_leader", Model.moduleleaders)
+               @*@if (Model.leadersmodules != null) {
+    @Html.Partial("_select_module", Model.leadersmodules)
+               }*@
+
+</div>
+
+@section Scripts {
+    <script src="~/Scripts/globalize/globalize.js"></script>
+    <script src="~/Scripts/globalize/cultures/globalize.culture.en-GB.js"></script>
+    @Scripts.Render("~/bundles/jqueryval")
+    <script>
+        Globalize.culture("en-GB");
+        $.validator.methods["date"] = function (value, element) {
+            return this.optional(element) || Globalize.parseDate(value);
+        };
+    </script>
+
+}

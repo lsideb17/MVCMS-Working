@@ -1,0 +1,509 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+#container {
+	width: 1000px;
+	margin: auto;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+.hidden {
+	display: none;
+}
+
+body {
+	font-family: Verdana, Helvetica, Sans-serif;
+	font-size: 12px;
+	color: #000000;
+	background: #ffffff;
+    line-height: 1.88889;
+}
+
+#main-nav {
+	height: 50px;
+}
+
+#header {
+	height: 100px;
+	border-bottom: 1px Blue solid;	
+}
+
+#header h1
+{
+    font: italic normal bold 2.5em Monotype Corsiva, georgia, sans-serif;
+	text-align: center;
+	color: Blue;
+}
+
+#header h2
+{
+    font:italic normal 2.1em Monotype Corsiva, georgia, sans-serif;
+	text-align: center;
+	color: DarkGreen;
+}
+
+#sidebar {
+	float: right;
+	width: 180px;
+	line-height: 18px;	
+	border-left: 1px Blue solid;	
+}
+
+#sidebar li {
+	list-style: none;
+	padding-bottom: 0.2em;
+}
+
+#sidebar  h2
+{
+    font:italic normal 2.1em Monotype Corsiva, georgia, sans-serif;
+	text-align: center;
+	color: DarkGreen;
+}
+
+#content {
+	margin-right: 180px;
+	line-height: 18px;	
+}
+
+#footer {
+	clear: both;
+	height: 66px;
+}
+
+h1,h2 {
+	margin: 0;
+	padding: 0;
+}
+
+ul#menu
+{
+    border-bottom: 1px Blue solid;
+    padding: 0 0 2px;
+    /* position: relative; */
+    margin: 0;
+    text-align: left;
+    /* width:50%; */
+}
+
+ul#menu li
+{
+    display: inline;
+    list-style: none;
+    color: LightGreen;
+}
+
+ul#menu li#greeting
+{
+    padding: 10px 20px;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 2.8em;
+    color: #fff;
+}
+
+ul#menu li a
+{
+    padding: 10px 20px;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 2.8em;
+    background-color: Blue;
+    color: LightGreen;   
+}
+
+ul#menu li a:hover
+{
+    background-color: #a6e2a6;
+	color: DarkGreen;
+    text-decoration: none;
+}
+
+ul#menu li a:active
+{
+    background-color: #a6e2a6;
+	color: DarkGreen;
+    text-decoration: none;
+}
+
+ul#menu li.selected a
+{
+    background-color: #fff;
+    color: #000;
+}
+
+table
+{
+    color:#333333;border-collapse:collapse; 
+}
+			   
+
+tr.odd
+{
+   color:#333333;background-color:LightGreen;font-size:large;font-family:Verdana;border:medium solid white;
+}    
+
+tr.even
+{
+   color:#333333;background-color:#FFFFCC;font-size:large;font-family:Verdana;border:medium solid white;
+} 
+
+#paginationDiv
+{
+	font-family: Tahoma, Geneva, sans-serif;
+    font-size: 1.8em;
+	margin-top: 10px;	
+}
+
+#searchBox
+{
+    float:right;
+}
+
+#moduleDetails 
+{
+	margin-right: 10px;
+    float: left;
+    padding: 5px;
+    width: 90%; 
+}
+
+#moduleDetails h2
+{
+    text-align: left;
+    font: italic normal bold 2.1em "New Century Schoolbook", georgia, sans-serif;
+    color: Blue;
+}
+
+#moduleDetails h3
+{
+    text-align: left;
+    font: italic normal bold 1.7em  "New Century Schoolbook", georgia, sans-serif;
+    color: DarkGreen;    
+}
+
+#moduleDetails p
+{
+    text-align: left;
+    font: normal 1.5em  "Calibri", georgia, sans-serif;   
+}
+
+#keywords
+{
+	/* clear: both; */
+    width: 80%;
+	font: normal bold 1.2em Arial, Helvetica, sans-serif;
+}
+
+#keywords li {
+	/*list-style: none;*/
+	display: inline;
+}
+
+#keywords li:last-child:after {content: ""; }
+
+#keywords li:after { content: "|"; padding: 0 .2em; }
+
+#album h2
+{
+    text-align: left;
+    font: italic normal bold 2.1em "New Century Schoolbook", georgia, sans-serif;
+    color: Blue;
+}
+
+#logout
+{
+	clear:both;
+}
+
+.albumimage img
+{
+	height: 50px;
+	width: 50px;
+    box-shadow: 2px 2px 2px #111;
+	margin-top: 5px;
+	margin-left: 5px;
+}
+
+div.grid 
+{
+    width:700px;
+    margin: 10px;
+    text-decoration: none;
+    position: relative;
+}
+.grid .album
+{
+    padding: 25px;
+	display: inline-block;
+	position: relative;
+}
+
+.grid .album img
+{
+	height: 100px;
+	width: 100px;
+    box-shadow: 5px 5px 5px #111;	
+}
+
+.grid .album  .albumdetails
+{
+    width: 200px;
+    background-color: #CCCCCC;
+	font-family: Tacoma;
+	font-size: 1.5em;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 5px 5px 5px #111;
+    padding: 10px;
+    visibility: hidden;
+    position: absolute;
+    z-index: 10;
+    top: -50px;
+    left: 100px;
+}
+
+.grid .album .albumdetails .albumtitle
+{
+	color: Blue;
+}
+
+.grid .album .albumdetails .artist
+{
+	color: DarkGreen;
+}
+
+.grid .album .image:hover  .albumdetails
+{
+    visibility: visible;
+}
+
+#searchBox
+{
+    float:right;
+}
+
+#album h2
+{
+    text-align: left;
+    font: italic normal bold 2.1em "New Century Schoolbook", georgia, sans-serif;
+    color: Blue;
+}
+#leftItemTemplate,#rightItemTemplate 
+{
+    padding: 0 0px;
+    margin: 0;
+}
+
+#leftItemTemplate 
+{
+    float: left;
+    padding: 5px;
+    width: 30%;
+}
+
+#rightItemTemplate 
+{
+    float: right;
+    padding: 5px;
+    width: 60%;
+}
+
+#leftItemTemplate h2
+{
+    text-align: left;
+    font: italic normal bold 2.1em "New Century Schoolbook", georgia, sans-serif;
+    color: Blue;
+}
+
+#leftItemTemplate h3
+{
+    text-align: left;
+    font: italic normal bold 1.7em  "New Century Schoolbook", georgia, sans-serif;
+    color: DarkGreen;    
+}
+
+#rightItemTemplate h3
+{
+    text-align: left;
+    font: italic normal bold 1.7em  "New Century Schoolbook", georgia, sans-serif;
+    color: DarkGreen;    
+}
+
+/* login
+----------------------------------------------------------*/
+#login {
+    display: block;
+    font-size: .85em;
+    margin: 0 0 10px;
+    text-align: right;
+}
+
+    #login a {
+        background-color: #d3dce0;
+        margin-left: 10px;
+        margin-right: 3px;
+        padding: 2px 3px;
+        text-decoration: none;
+    }
+
+    #login a.username {
+        background: none;
+        margin: 0;
+        padding: 0;
+        text-decoration: underline;
+    }
+
+    #login ul {
+        margin: 0;
+    }
+
+    #login li {
+        display: inline;
+        list-style: none;
+    }
+
+    /* login page */
+#loginForm {
+    border-right: solid 2px #c8c8c8;
+    float: left;
+    width: 55%;
+}
+
+    #loginForm .validation-error {
+        display: block;
+        margin-left: 15px;
+    }
+
+    #loginForm .validation-summary-errors ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    #loginForm .validation-summary-errors li {
+        display: inline;
+        list-style: none;
+        margin: 0;
+    }
+
+    #loginForm input {
+        width: 250px;
+    }
+
+    #loginForm input[type="checkbox"],
+    #loginForm input[type="submit"],
+    #loginForm input[type="button"],
+    #loginForm button {
+        width: auto;
+    }
+
+    #logoutForm {
+    display: inline;
+}
+
+    /* forms */
+#loginForm fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+    #loginForm fieldset legend {
+        display: none;
+    }
+
+    #loginForm fieldset ol {
+        padding: 0;
+        list-style: none;
+    }
+
+       #loginForm  fieldset ol li {
+            padding-bottom: 5px;
+        }
+
+#loginForm label {
+    display: block;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+label.checkbox {
+    display: inline;
+}
+
+#loginForm input, textarea {
+    border: 1px solid #e2e2e2;
+    background: #fff;
+    color: #333;
+    font-size: 1.2em;
+    margin: 5px 0 6px 0;
+    padding: 5px;
+    width: 300px;
+}
+
+#loginForm textarea {
+    font-family: inherit;
+    width: 500px;
+}
+
+    #loginForm input:focus, textarea:focus {
+        border: 1px solid #7ac0da;
+    }
+
+    #loginForm input[type="checkbox"] {
+        background: transparent;
+        border: inherit;
+        width: auto;
+    }
+
+    #loginForm input[type="submit"],
+    #loginForm input[type="button"],
+    #loginForm button {
+        background-color: #d3dce0;
+        border: 1px solid #787878;
+        cursor: pointer;
+        font-size: 1.2em;
+        font-weight: 600;
+        padding: 7px;
+        margin-right: 8px;
+        width: auto;
+    }
+
+    #loginForm td input[type="submit"],
+   #loginForm  td input[type="button"],
+    #loginForm td button {
+        font-size: 1em;
+        padding: 4px;
+        margin-right: 4px;
+    }
+
+/* info and errors */
+.message-info {
+    border: 1px solid;
+    clear: both;
+    padding: 10px 20px;
+}
+
+.message-error {
+    clear: both;
+    color: #e80c4d;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin: 20px 0 10px 0;
+}
+
+.message-success {
+    color: #7ac0da;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin: 20px 0 10px 0;
+}
+
+.error {
+    color: #e80c4d;
+}

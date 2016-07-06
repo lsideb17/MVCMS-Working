@@ -1,0 +1,16 @@
+﻿
+@model IEnumerable<MVCModuleStarter.Models.Keyword>
+    <ol>
+@foreach (var item in Model)
+{
+            
+                <ul>
+                @Html.DisplayFor(modelItem => item.KeywordTerm) 
+                @*
+
+                    Html.ActionLink("Edit", "EditTrack", new { id=item.ModuleId, no = item.KeywordId })*@
+                </ul>
+            
+
+    }
+    </ol>

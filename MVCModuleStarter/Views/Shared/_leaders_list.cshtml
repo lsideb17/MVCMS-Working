@@ -1,0 +1,24 @@
+﻿@*@model IEnumerable<MVCModuleStarter.Models.Module>
+        @model MVCModuleStarter.Helpers.PaginatedList<MVCModuleStarter.PaginatedList>
+
+    <div id="main" class="table">
+        <div class="modules">
+            @foreach (var item in Model)
+            {
+                <div class="album">
+                    <div class="image">
+                        @{ string imageURL = "../../Images/" + Html.Encode(item.ImageURL);}
+                        <a href="@Url.Action("Details", "Modules", new { id = item.ModuleId })">
+                            <img src="@Html.Encode(imageURL)" alt="@Html.Encode(item.ModuleTitle)" />
+                        </a>
+                        <div class="albumdetails">
+                            <span class="albumtitle">@Html.Encode(item.ModuleTitle)</span>
+                            <span class="artist">@Html.Encode(item.ModuleLeader)</span>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+*@

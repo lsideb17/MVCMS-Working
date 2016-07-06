@@ -1,0 +1,18 @@
+﻿@model IEnumerable<MVCModuleStarter.Models.ModuleLeader>
+
+    @using (Html.BeginForm("SelectModuleLeader", "Modules", FormMethod.Post))
+    {
+        <div>
+            <p>
+                <select name="moduleleader">
+                    @foreach (var item in Model)
+                    {
+                        <option value="@item.moduleleader">@item.moduleleader</option>
+                    }
+                </select>
+            </p>
+            <p>
+                <input type="submit" name="action" value="Select Module Leader" />
+            </p>
+        </div>
+    }

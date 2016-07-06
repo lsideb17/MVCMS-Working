@@ -1,0 +1,13 @@
+﻿@model IEnumerable<MVCModuleStarter.Models.ModuleLeader>
+@{
+    ViewBag.Title = "ModuleLeader";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@Html.Partial("_moduleLeaderModules", Model)
+
+@*@section SideBar {
+   @Html.Partial("_modules_list", Model.othermodules)
+ }*@
+
+

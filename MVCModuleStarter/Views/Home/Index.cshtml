@@ -1,0 +1,10 @@
+﻿@model MVCModuleStarter.ViewModels.HomeViewModel
+@{
+    ViewBag.Title = "Home Page";
+}
+@Html.Partial("_modules_set", Model.randommodules)
+
+
+@section SideBar {
+    @Html.Partial("_categories_list", Model.categories)
+}

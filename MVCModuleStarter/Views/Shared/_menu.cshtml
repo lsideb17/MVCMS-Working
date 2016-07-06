@@ -1,0 +1,13 @@
+﻿<div id="main-nav">
+	@Html.Partial("_searchbox")
+    <ul id="menu">
+        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+        <li>@Html.ActionLink("Modules", "Index", "Modules")</li>
+        <li>@Html.ActionLink("Module Leaders", "ModuleLeaders", "Modules")</li>
+        <li>@Html.ActionLink("Module Admin", "Login", "Account")</li>
+       @*<li>@Html.ActionLink("Admin", "Admin", "Modules")</li> *@
+        <li>@Html.ActionLink("Student Admin", "StudentAdmin", "Modules")</li> 
+        <li>@Html.ActionLink("Advanced Search", "AdvancedSearch", "Modules")</li> 
+                  
+	</ul>
+</div>

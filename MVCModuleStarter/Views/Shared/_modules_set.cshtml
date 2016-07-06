@@ -1,0 +1,37 @@
+﻿ @* @model IEnumerable<MVCModuleStarter.Models.Module>*@
+@model MVCModuleStarter.Helpers.PaginatedList<MVCModuleStarter.Models.Module>
+
+
+    <div id="main" class="grid">
+        <div class="modules">
+            @foreach (var item in Model)
+            {
+                <div class="album">
+                    <div class="image">
+                        @{ string imageURL = "../../Images/" + Html.Encode(item.ImageURL);}
+                        <a href="@Url.Action("Details", "Modules", new { id = item.ModuleId })">
+                            <img src="@Html.Encode(imageURL)" alt="@Html.Encode(item.ModuleTitle)" />
+                        </a>
+                        <div class="albumdetails">
+                            <span class="albumtitle">@Html.Encode(item.ModuleTitle)</span>
+                            <span class="artist">@Html.Encode(item.ModuleLeader)</span>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+<div class="pagination">
+                @if (Model.HasPreviousPage)
+                {
+                     @Html.ActionLink("Previous", "Filter", new { page = (Model.PageIndex - 1), category = ViewBag.category, search_string = ViewBag.search_string, keyword = ViewBag.keyword })
+                }
+
+                @if (Model.HasNextPage)
+                {
+                    @Html.ActionLink("Next", "Filter", new { page = (Model.PageIndex + 1), category = ViewBag.category, search_string = ViewBag.search_string, keyword = ViewBag.keyword })
+                }
+</div>
+
+

@@ -1,0 +1,23 @@
+﻿@model IEnumerable<MVCModuleStarter.Models.Module>
+
+<div>
+    <h2>Modules</h2>
+    <ul>
+        @foreach (var item in Model)
+        {
+            <li>
+                              
+                  
+                @{ string imageURL = "../../Images/" + Html.Encode(item.ImageURL);}
+                 <a href="@Url.Action("Details", "Modules", new { id = item.ModuleId })">
+                     <img src="@Html.Encode(imageURL)" alt="@Html.Encode(item.ModuleTitle)" height="50" width="50" />
+                 </a>
+
+                  
+                 @Html.DisplayFor(modelItem => item.ModuleTitle) 
+                
+            </li>
+        }
+
+    </ul>
+</div>

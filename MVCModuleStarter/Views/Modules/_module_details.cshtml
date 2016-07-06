@@ -1,0 +1,30 @@
+﻿@model MVCModuleStarter.ViewModels.ModuleDetailsViewModel
+<div id="album">
+
+    <h2>@Model.module.ModuleTitle - @Model.module.ModuleLeader</h2>
+
+    <h3>@Html.Encode(@Model.module.Category)</h3>
+
+
+    <div id='leftItemTemplate'>
+        <p>
+
+            @{ string imageURL = "../../Images/" + Html.Encode(Model.module.ImageURL);}
+            <img src="@Html.Encode(imageURL)" alt="@Html.Encode(Model.module.ModuleTitle)"
+                 height="200" width="200" />
+        </p>
+    </div>
+ 
+    <div id='rightItemTemplate'>
+        <h2>Description</h2>
+        <p>
+            @String.Format("{0:d}",Model.module.ModuleDescription)
+        </p>
+
+        <h2>Keywords</h2>
+        <div id="keywords">
+        @Html.Partial("_keyword_list", Model.module.Keywords)
+    </div>
+    
+</div>
+

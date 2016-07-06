@@ -1,0 +1,28 @@
+﻿@model IEnumerable<MVCModuleStarter.Models.ModuleLeader>
+<h2>ModuleLeader</h2>
+
+    <div id="main" class="table">
+         <table>
+             <tr>
+                <th></th>
+                <th>
+                    Module Leader
+                </th>
+                 <th>
+                 Module
+                 </th>
+                @foreach (var item in Model)
+                {
+
+                <tr>
+                    <td>
+                        <a href="@Url.Action("Filter", "Modules", new { modules = item.moduleleader, search_string = ViewBag.search_string })">
+                            @Html.DisplayFor(modelItem => item.moduleleader)&nbsp;
+                        </a>
+                    </td>
+                 </tr>
+                }
+            </table>
+</div>
+
+

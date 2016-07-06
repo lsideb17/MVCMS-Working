@@ -1,0 +1,18 @@
+﻿@model IEnumerable<mvcmodulestarter.models.module>
+
+    @using (Html.BeginForm("SelectModule", "Modules", FormMethod.Post))
+    {
+        <div>
+            <p>
+                <select name="modules">
+                    @foreach (var item in Model)
+                    {
+                        <option value="@item.ModuleId">@item.ModuleTitle</option>
+                    }
+                </select>
+            </p>
+            <p>
+                <input type="submit" name="action" value="Select Module" />
+            </p>
+        </div>
+    }

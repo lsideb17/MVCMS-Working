@@ -1,0 +1,11 @@
+﻿@model MVCModuleStarter.ViewModels.ModuleDetailsViewModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+@Html.Partial("_module_details", Model.allkeywords) @**@
+
+@section SideBar {
+    @Html.Partial("_modules_list", Model.othermodules)
+}
